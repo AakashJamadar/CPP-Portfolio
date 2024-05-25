@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main(){
-    //null value=a speacial value that means something has no value
+    //null value=a special value that means something has no value
     //when a pointer is holding a null value,
     //that pointer is not pointing at anything(null pointer)
 
@@ -32,10 +32,10 @@ int main(){
     //pointer=&age;
 
     //If our pointer is still a null pointer,it's not safe to dereference that pointer
-    //if i want access to the value that is at that pointer ,we can do it in the else statement(as it won't be a nullptr if else is executed)
+    //if i want access to the value that is at that pointer ,we can do it in the else statement(as it won't be a nullptr incase else is executed)
     if(pointer==nullptr){
         std::cout<<"Address was not assigned!\n";
-        std::cout<<pointer;  //dereferencing the null ptr by commenting(line 32) the value assigned to the pointer (it just ouput 0 here)
+        std::cout<<pointer;  //dereferencing the null ptr by commenting line 32 (the value assigned to the pointer) (it just ouput a 0 here)
     }else{
         std::cout<<"Address was assigned\n";
         //std::cout<<*pointer;
