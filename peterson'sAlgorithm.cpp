@@ -9,7 +9,7 @@ void process0(){
         flag[0]=true;
         turn=1;
         while(turn==1 && flag[1]==true); //busy wait
-            //critical section
+            //critical section 1
             flag[0]=false;
     }
 }
@@ -19,7 +19,7 @@ void process1(){
         flag[1]=true;
         turn=0;
         while(turn==0 && flag[0]==true);  //busy wait
-        //critical section
+        //critical section 2
         flag[1]=false;
     }
 }
