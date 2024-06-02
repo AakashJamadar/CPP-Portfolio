@@ -1,38 +1,48 @@
-#include <iostream>
+// Function Description
 
-int main(){
-    //pointer=variable that stores a memory address of another variable.
-    //sometimes it is easier to work with an address
+// Complete the update function in the editor below.
 
-    //&= address of operator
-    //*= dereference operator
-    // std::string name="jio";
-    // std::string* pName=&name;
-    // std::cout<<name<<'\n';
-    // std::cout<<&name<<'\n';
-    // std::cout<<pName<<'\n';
-    // std::cout<<*pName<<'\n';
+// update has the following parameters:
 
-    //The dereference operator, also known as the indirection operator, 
-    //is a symbol that gives access to the value at a memory address pointed to 
-    //by a pointer in programming languages. It is usually represented by an asterisk (*) symbol.
+// int *a: an integer
+// int *b: an integer
+// Returns
 
-    // int age=45;
-    // int * pAge= &age;
-    // std::cout<<*pAge<<'\n';
+// The function is declared with a void return type, so there is no value to return. Modify the values in memory 
+// so that  contains their sum and  contains their absoluted difference.
 
-    std::string freePizzas [5]={"pizza1","pizza2","pizza3","pizza4","pizza5"};
-    std::string* pFreePizzas=freePizzas;
-    // std::cout<<(&freePizzas)<<'\n';  //prints the memory address of the entire array.
-    // //array name already prints the address, so no need to add '&' again,
-    // std::cout<<pFreePizzas<<'\n';  //prints the memory address of the first element of the array. ( because, & is not used)
-    // //They are printing the same memory addresses,so let's use static_cast
-    // std::cout<<static_cast<void*>(&freePizzas)<<'\n';
-    // std::cout<<static_cast<void*>(pFreePizzas)<<'\n';  //it also printed the same memory address
 
-    std::cout<<&freePizzas<<'\n';   
-    std::cout<<&pFreePizzas<<'\n';  //prints the address in memory where the pointer variable pFreePizzas is stored.
-    std::cout<<*(&freePizzas)<<'\n'; //outputs the memory addresss as it points to the memory address of the entire array and it can't print the entire array
-    std::cout<<*pFreePizzas<<'\n';   //prints the first element of the array as it points to first element's memory address
+// Input Format
+
+// Input will contain two integers,  and , separated by a newline.
+
+// Sample Input
+
+// 4
+// 5
+// Sample Output
+
+// 9
+// 1
+
+#include <stdio.h>
+#include <cmath>
+
+void update(int *a,int *b) {
+    // Complete this function 
+    int orig_a=*a; 
+     *a=*a+*b;
+     *b=abs((orig_a-*b));
+    
+}
+
+int main() {
+    int a, b;
+    int *pa = &a, *pb = &b;
+    
+    scanf("%d %d", &a, &b);
+    update(pa, pb);
+    printf("%d\n%d", a, b);
+
     return 0;
 }
