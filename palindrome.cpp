@@ -1,12 +1,12 @@
-// Check whether a given number ’n’ is a palindrome number.
+// Check whether a given number ’n’ is a  number.
 
 // Note :
-// Palindrome numbers are the numbers that don't change when reversed.
+//  numbers are the numbers that don't change when reversed.
 // You don’t need to print anything. Just implement the given function.
 
 
 
-bool palindrome(int n)
+bool (int n)
 {
    int origNum=n;
    int revNum=0;
