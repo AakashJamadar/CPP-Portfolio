@@ -1,45 +1,66 @@
 #include <iostream>
 
-class Animal{           //parent class
-    public:
-        bool alive=true;
+//Notes for inheritance is in the inheritanceAccessModifiers.cpp file
 
-    void eat(){
-        std::cout<<"This Animal is eating\n";
-    }
+//Sub class-The class that inherits propeties from other class is called sub class or child class or derived class
+//Super class-TThe class whose properties are inherited by the sub class is called the super class or parent class or base class
+
+class Human{
+    public:
+        int age;
+        int height;
+        int weight;
+
+    public:
+        void setWeight(int w){
+            this->weight=w;
+        }
+        int getHeight(){
+            return height;
+        }
 };
 
-class Dog : public Animal{      //child class
+//child class
+class Male:public Human{
     public:
-        std::string color="Brown";
+        std::string color;
 
-    void bark(){
-        std::cout<<"Bow-wow\n";
-    }
+        void sleep(){
+            std::cout<<"Male is sleeping\n";
+        }
+        void setHeight(){
+            this->height++;
+        }
 };
 
-class Cat : public Animal{      //child class
+class Student:public Male{
     public:
-        std::string color="White";
+        int grade;
 
-    void meow(){
-        std::cout<<"Meow-moew\n";
-    }
+        void study(){
+            std::cout<<"studying\n";
+        }
+        void setAge(){
+            this->age++;
+        }
 };
 
 int main(){
-    //inheritance = A class can receive attributes and methods from another class
-    //Children classes inherit form a parent class
-    //Helps to reuse similar code found within multiple classes
+    Male h;
+    Student s;
 
-    Dog dog;
-    Cat cat;
+    //To check the inheritance properties of access modifiers
+    std::cout<<h.age<<std::endl;
+    std::cout<<s.age<<std::endl;
 
-    std::cout<<cat.alive<<'\n';
-    std::cout<<cat.color<<'\n';
-    cat.eat();
-    //dog.bark();
-    cat.meow();
+    // std::cout<<h.height<<std::endl;
+    // std::cout<<h.age<<std::endl;
+    // std::cout<<h.weight<<std::endl;
+    // std::cout<<h.color<<'\n';
+    // h.setWeight(70);
+    // std::cout<<h.weight<<'\n';
+    // h.sleep();
+
 
     return 0;
 }
