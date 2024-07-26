@@ -51,7 +51,7 @@ void explainMultiSet(){
     std::multiset<int>::iterator itt=ms.erase(ms.find(1),std::next(ms.find(1),2)); 
     //finds first 1 and finds 2 places after 1 then erases first 1 and next element as last is not included
     //*(itt) if element is absent *(itt)='N',,,,if element is present *(itt)prints next element after erasing range(remember not includes lat element)
-    //if it exactly completest the range *(itt) returns n(now N will be 2 less as it erases last 2 elements),,,,if it completes half range it gives mixed values like last elment or N after erasing half range
+    //if it exactly completest the range *(itt) returns N(now N will be 2 less as it erases last 2 elements),,,,if it completes half range it gives mixed values like last elment or N after erasing half range
     //rest all functions same as set
     }
 
